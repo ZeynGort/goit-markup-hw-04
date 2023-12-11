@@ -9,6 +9,8 @@ li {
   --selection-color: #2196f3;
   --head-color: #212121;
   --text-color: #757575;
+  --svg-color: #afb1b8;
+  --bc: #f5f4fa;
 }
 body {
   font-family: Roboto, sans-serif;
@@ -109,6 +111,14 @@ header {
   display: flex;
   margin-left: auto;
 }
+.header-contacts .link {
+  display: flex;
+  align-items: center;
+}
+.header-contacts .link-icon {
+  margin-right: 10px;
+  fill: var(--text-color);
+}
 .header-contacts .item:not(:last-child) {
   margin-right: 40px;
 }
@@ -121,9 +131,13 @@ header {
   line-height: 1.2;
   letter-spacing: 0.28px;
 }
-.header-contacts a:focus,
-.header-contacts a:hover {
+.header-contacts .link:focus,
+.header-contacts .link:hover {
   color: var(--selection-color);
+}
+.header-contacts .link:focus svg,
+.header-contacts .link:hover svg {
+  fill: var(--selection-color);
 }
 
 /*index.html*/
@@ -131,8 +145,16 @@ header {
 
 .hero {
   text-align: center;
-  background-color: #2f303a;
+  background-color: #c4c4c4;
   padding: 200px 0;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/Img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .hero h1 {
   width: 696px;
@@ -181,6 +203,19 @@ header {
 .advantages-items .item {
   width: 270px;
 }
+.advantages-items .icon-box {
+  border-radius: 4px;
+  width: 270px;
+  height: 120px;
+  padding: 25px 100px;
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+  background-color: var(--bc);
+  margin-bottom: 30px;
+}
+.advantages-items .item-icon {
+}
 .advantages-items .item:not(:last-child) {
   margin-right: 30px;
 }
@@ -226,7 +261,7 @@ header {
 /*team*/
 
 .team {
-  background: #f5f4fa;
+  background: var(--bc);
   padding-top: 94px;
 }
 .team li {
@@ -250,6 +285,8 @@ header {
 }
 .team-items .item {
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 .team-box {
   padding: 30px 0;
@@ -274,6 +311,49 @@ header {
   line-height: 1.2;
   letter-spacing: 0.48px;
 }
+.list-link-item {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+.list-link-item .link-items {
+  display: flex;
+  align-content: center;
+  width: 44px;
+  height: 44px;
+}
+.list-link-item a {
+  padding: 12px;
+  border-radius: 50%;
+}
+.list-link-item a:focus,
+.list-link-item a:hover {
+  background-color: var(--selection-color);
+}
+.list-link-item a:focus svg,
+.list-link-item a:hover svg {
+  fill: #fff;
+}
+
+.list-link-item .link-items:not(:last-child) {
+  margin-right: 10px;
+}
+.list-link-item svg {
+  fill: var(--svg-color);
+}
+/*clients*/
+.clients {
+  margin-top: 94px;
+}
+.clients-head {
+  color: #212121;
+  text-align: center;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 1.08px;
+}
 
 /*portfolio.html*/
 .portfolio {
@@ -290,9 +370,9 @@ header {
 .portfolio-button {
   padding: 6px 22px;
   border-radius: 4px;
-  border: #f5f4fa;
+  border: var(--bc);
 
-  background-color: #f5f4fa;
+  background-color: var(--bc);
   text-align: center;
   cursor: pointer;
   font-size: 16px;
