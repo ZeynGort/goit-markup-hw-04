@@ -354,6 +354,37 @@ header {
   line-height: 1.2;
   letter-spacing: 1.08px;
 }
+.cilents-item {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.cilents-item .item {
+  width: 170px;
+  height: 92px;
+}
+
+.cilents-item .item:not(:last-child) {
+  margin-right: 30px;
+}
+.cilents-item a {
+  display: flex;
+  align-items: center;
+  padding: 16px 32px;
+  border-radius: 4px;
+  border: 1px solid var(--svg-color);
+}
+.cilents-item svg {
+  fill: var(--svg-color);
+}
+.cilents-item a:focus,
+.cilents-item a:hover {
+  border-color: var(--selection-color);
+}
+.cilents-item a:focus svg,
+.cilents-item a:hover svg {
+  fill: var(--selection-color);
+}
 
 /*portfolio.html*/
 .portfolio {
@@ -396,6 +427,11 @@ header {
   border-left: 1px solid #eee;
   padding: 20px 24px;
 }
+.portfolio-posters .item:hover,
+.portfolio-posters .item:focus {
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+}
 .portfolio-posters .item:not(:nth-child(3n)) {
   margin-right: 30px;
 }
@@ -427,6 +463,11 @@ header {
 footer {
   background: #2f303a;
   padding: 60px 0;
+}
+.f-con {
+  display: inline-flex;
+  flex-direction: column;
+  margin-right: 94px;
 }
 .footer-logo {
   display: inline-block;
@@ -468,4 +509,43 @@ footer {
   font-weight: 400;
   line-height: 1.71429;
   letter-spacing: 0.42px;
+}
+.f-add {
+  display: inline-flex;
+  flex-direction: column;
+}
+.f-add-h {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+}
+.footer-add-item {
+  display: flex;
+  margin-top: 20px;
+}
+.footer-add-item .add-item {
+  display: flex;
+  align-content: center;
+  width: 44px;
+  height: 44px;
+}
+.footer-add-item svg {
+  fill: #fff;
+}
+
+.footer-add-item a {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 50%;
+}
+.footer-add-item a:focus,
+.footer-add-item a:hover {
+  background-color: var(--selection-color);
+}
+.footer-add-item .add-item:not(:last-child) {
+  margin-right: 10px;
 }
