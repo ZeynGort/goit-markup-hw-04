@@ -144,9 +144,13 @@ header {
 /*hero*/
 
 .hero {
+  margin-right: auto;
+  margin-left: auto;
   text-align: center;
   background-color: #c4c4c4;
   padding: 200px 0;
+  max-width: 1600px;
+  
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
@@ -207,10 +211,9 @@ header {
   border-radius: 4px;
   width: 270px;
   height: 120px;
-  padding: 25px 100px;
-  /*display: flex;
+  display: flex;
   justify-content: center;
-  align-items: center;*/
+  align-items: center;
   background-color: var(--bc);
   margin-bottom: 30px;
 }
@@ -323,8 +326,12 @@ header {
   height: 44px;
 }
 .list-link-item a {
-  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
+  width: 100%;
+  height: 100%;
 }
 .list-link-item a:focus,
 .list-link-item a:hover {
@@ -343,7 +350,7 @@ header {
 }
 /*clients*/
 .clients {
-  margin-top: 94px;
+  padding-top: 94px;
 }
 .clients-head {
   color: #212121;
@@ -368,9 +375,11 @@ header {
   margin-right: 30px;
 }
 .cilents-item a {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
-  padding: 16px 32px;
+  justify-content: center;
   border-radius: 4px;
   border: 1px solid var(--svg-color);
 }
@@ -416,6 +425,7 @@ header {
 .portfolio-button:hover {
   color: #fff;
   background-color: var(--selection-color);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
 }
 .portfolio-posters {
   display: flex;
@@ -427,8 +437,12 @@ header {
   border-left: 1px solid #eee;
   padding: 20px 24px;
 }
-.portfolio-posters .item:hover,
-.portfolio-posters .item:focus {
+.portfolio-posters a{
+  display: block;
+
+}
+.portfolio-posters a:hover,
+.portfolio-posters a:focus {
   box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
     0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
@@ -464,10 +478,12 @@ footer {
   background: #2f303a;
   padding: 60px 0;
 }
-.f-con {
-  display: inline-flex;
-  flex-direction: column;
-  margin-right: 94px;
+.foot{
+  display: flex;
+  align-items: baseline;
+}
+.f-con{
+margin-right: 94px;
 }
 .footer-logo {
   display: inline-block;
@@ -510,10 +526,7 @@ footer {
   line-height: 1.71429;
   letter-spacing: 0.42px;
 }
-.f-add {
-  display: inline-flex;
-  flex-direction: column;
-}
+
 .f-add-h {
   color: #fff;
   font-size: 14px;
@@ -539,8 +552,12 @@ footer {
 
 .footer-add-item a {
   background-color: rgba(255, 255, 255, 0.1);
-  padding: 12px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
+  width: 100%;
+  height: 100%;
 }
 .footer-add-item a:focus,
 .footer-add-item a:hover {
